@@ -17,7 +17,7 @@ class TestUtils(unittest.TestCase):
 		self.assertEqual((1), utils.roots(0,1,-1))
 		self.assertEqual((1,-1), utils.roots(1,0,-1))
 	def test_integrate(self):
-		self.assertEqual(-(4.0/3), utils.integrate('x ** 2 - 1',-1,1))
+		self.assertEqual(round(-(4/3), 1), round(utils.integrate('x ** 2 - 1',-1,1),1))
 if __name__ == '__main__':
 	suite = unittest.TestLoader().loadTestsFromTestCase(TestUtils)
 	runner = unittest.TextTestRunner()
