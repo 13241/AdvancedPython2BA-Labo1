@@ -13,7 +13,7 @@ class TestUtils(unittest.TestCase):
 		with self.assertRaises(ValueError):
 			utils.fact(-1)
 	def test_roots(self):
-		self.assertEqual(tuple(), utils.roots(0,0,5))
+		self.assertEqual(tuple(), utils.roots(0,0,4))
 		self.assertEqual((1), utils.roots(0,1,-1))
 		self.assertEqual((1,-1), utils.roots(1,0,-1))
 	def test_integrate(self):
