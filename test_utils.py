@@ -10,9 +10,10 @@ class TestUtils(unittest.TestCase):
 		self.assertEqual(1, utils.fact(0))
 		self.assertEqual(1, utils.fact(1))
 		self.assertEqual(6, utils.fact(3))
-		with self.assertRaises(ValueError): utils.fact(-1)
+		with self.assertRaises(ValueError):
+			utils.fact(-1)
 	def test_roots(self):
-		self.assertEqual((), utils.roots(0,0,5))
+		self.assertEqual(tuple(), utils.roots(0,0,5))
 		self.assertEqual((1), utils.roots(0,1,-1))
 		self.assertEqual((1,-1), utils.roots(1,0,-1))
 	def test_integrate(self):
